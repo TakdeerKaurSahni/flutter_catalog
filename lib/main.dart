@@ -7,7 +7,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_catalog/model.dart'; 
     
 
-    String apiURL = 'https://jsonplaceholder.typicode.com/users'; //Input***
+String apiURL = 'https://jsonplaceholder.typicode.com/users'; //Input***
 void main() { runApp(const MyApp());} 
 
 
