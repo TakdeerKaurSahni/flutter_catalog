@@ -8,30 +8,15 @@ import 'package:flutter_catalog/model.dart';
     
 
 String apiURL = 'https://jsonplaceholder.typicode.com/users'; //Input***
-void main() { runApp(const MyApp());} 
+void main() { runApp(MyApp());} 
 
 
 
-
-
-
-
-
-
-
-
-
-
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
+class MyApp extends StatelessWidget { 
+  @override Widget build(BuildContext context) {
     return const MaterialApp( 
-      //home: Home(),
          home: Scaffold(
-          body: JSONListView(),             //1)Cal to create List at body
+          body: JSONListView(),    //1)Make this stateful,Cal to create List at body
       )
     );
   }
@@ -47,6 +32,9 @@ class JSONListView extends StatefulWidget {
 }
  
 class CustomJSONListView extends State {
+
+
+@override void initState() {  super.initState();  print('initState');  }
 
   //fetch & convert Json data to Map, List, Return
   Future<List<GetUsers>> fetchJSONData(String apiURL) async { 
